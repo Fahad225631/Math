@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doccon: BS Mathematics study resources</title>
+<meta name="description" content="Free textbooks, solution manuals, YouTube playlists and practice papers for every BS Mathematics course.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#ffffff;--ink:#1b1013;--mute:#6d5559;--panel:#ffffff;--line:#f1d3d7;--acc:#e0142b;--acc2:#ff4b3e;--accink:#fff;--soft:#fff1f2;--glow:rgba(224,20,43,.16);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:5rem;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.55 "Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.6rem}
+.brand{font:700 1.35rem "Space Grotesk",system-ui,sans-serif;display:flex;align-items:center;gap:.55rem;text-decoration:none}
+.logo{width:1.9rem;height:1.9rem;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;display:grid;place-items:center;font:700 1.1rem "Space Grotesk",system-ui,sans-serif}
+.nav{display:flex;align-items:center;gap:.4rem}
+.nav a.t{font-weight:500;font-size:.95rem;text-decoration:none;padding:.4rem .7rem;border-radius:8px;color:var(--mute)}
+.nav a.t:hover{background:var(--soft);color:var(--ink)}
+.ib{width:2.4rem;height:2.4rem;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;font-size:1.05rem}
+.ib:hover{border-color:var(--acc)}
+.hero{position:relative;overflow:hidden;padding:4rem 0 2.5rem}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);z-index:0;opacity:.9;animation:float 14s ease-in-out infinite alternate}
+.hero::before{width:26rem;height:26rem;background:var(--glow);left:-8rem;top:-9rem}
+.hero::after{width:24rem;height:24rem;background:rgba(255,75,62,.14);right:-6rem;top:-4rem;animation-delay:-6s}
+@keyframes float{to{transform:translate(40px,30px) scale(1.12)}}
+.hero .wrap{position:relative;z-index:1}
+.pill{display:inline-flex;gap:.5rem;align-items:center;font-size:.85rem;font-weight:500;padding:.3rem .8rem;border:1px solid var(--line);border-radius:99px;background:var(--panel);color:var(--mute)}
+.pill i{width:.5rem;height:.5rem;border-radius:50%;background:#18b26b;display:inline-block}
+.hero h1{font-size:clamp(2.4rem,6.4vw,4.6rem);font-weight:700;max-width:17ch;letter-spacing:-.015em;margin:1.1rem 0 0}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{max-width:56ch;color:var(--mute);font-size:1.12rem;margin:1.1rem 0 1.6rem}
+.search{position:relative;display:block;max-width:40rem}
+.search input{width:100%;font:inherit;font-size:1.1rem;padding:1rem 4rem 1rem 3rem;border:1.5px solid var(--line);border-radius:14px;background:var(--panel);color:var(--ink);box-shadow:0 8px 30px -12px rgba(224,20,43,.25)}
+.search input:focus{border-color:var(--acc);outline:none;box-shadow:0 0 0 4px var(--glow)}
+.search svg{position:absolute;left:1rem;top:50%;translate:0 -50%;width:1.2rem;height:1.2rem;stroke:var(--mute)}
+.search kbd{position:absolute;right:.9rem;top:50%;translate:0 -50%;font:500 .8rem inherit;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:.1rem .45rem;color:var(--mute);background:var(--soft)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(8rem,1fr));gap:.8rem;margin-top:2rem;max-width:40rem}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem}
+.stat b{display:block;font:700 1.9rem "Space Grotesk",system-ui,sans-serif;line-height:1}
+.stat span{font-size:.85rem;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.filters{padding:.5rem 0 1rem}
+.chip{font:500 .92rem inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:.45rem .95rem;border-radius:99px;cursor:pointer}
+.chip:hover{border-color:var(--acc)}
+.chip[aria-pressed="true"]{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border-color:transparent}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:.3rem 0 1rem;flex-wrap:wrap;color:var(--mute)}
+.btn{font:700 1rem "Hanken Grotesk",system-ui,sans-serif;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border:0;padding:.75rem 1.25rem;border-radius:10px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px var(--acc)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--acc);box-shadow:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(21rem,1fr));gap:1rem;align-items:start;padding-bottom:3rem}
+.course{background:var(--panel);border:1px solid var(--line);border-radius:16px;transition:box-shadow .2s,border-color .2s;overflow:hidden}
+.course:hover,.course[open]{border-color:color-mix(in srgb,var(--acc) 55%,var(--line));box-shadow:0 14px 34px -18px var(--acc)}
+.course[open]{grid-column:1/-1}
+.course summary{list-style:none;cursor:pointer;display:flex;gap:.9rem;align-items:center;padding:1rem 1.1rem}
+.course summary::-webkit-details-marker{display:none}
+.num{flex:none;width:2.6rem;height:2.6rem;border-radius:12px;background:var(--soft);color:var(--acc);display:grid;place-items:center;font:700 1.15rem "Space Grotesk",system-ui,sans-serif}
+.course[open] .num{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff}
+.meta{flex:1;min-width:0}
+.ct{display:block;font:700 1.25rem "Space Grotesk",system-ui,sans-serif;line-height:1.15}
+.cn{display:block;color:var(--mute);font-size:.85rem;margin-top:.2rem}
+.star{flex:none;border:0;background:none;font-size:1.35rem;cursor:pointer;color:var(--mute);padding:.2rem .4rem;border-radius:8px}
+.star[aria-pressed="true"]{color:#f5a400}
+.cb{padding:0 1.1rem 1.2rem;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:0 1.6rem}
+.cb h3{font-size:1.05rem;margin:1.1rem 0 .55rem;color:var(--acc)}
+.cb .full{grid-column:1/-1}
+.books{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.books li{display:flex;flex-wrap:wrap;gap:.5rem 1rem;justify-content:space-between;align-items:center;background:var(--soft);border-radius:10px;padding:.65rem .85rem}
+.bt{display:flex;flex-direction:column;min-width:0;flex:1 1 14rem}
+.bt span{color:var(--mute);font-size:.88rem}
+.bl{display:flex;flex-wrap:wrap;gap:.45rem}
+.lk{display:inline-block;text-decoration:none;font-size:.9rem;font-weight:500;border:1.5px solid var(--acc);color:var(--acc);padding:.3rem .7rem;border-radius:8px;background:var(--panel);transition:.15s}
+.lk:hover{background:var(--acc);color:var(--accink)}
+.lk.sol{border-color:var(--mute);color:var(--ink)}
+.lk.sol:hover{background:var(--ink);color:var(--bg)}
+.lk.yt::before{content:"\25B6\00a0";font-size:.7em}
+.mini{font:500 .9rem inherit;background:none;border:0;color:var(--acc);text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:.25rem 0}
+.empty{padding:2rem 0;color:var(--mute)}
+.join{padding:1rem 0 3.5rem}
+.join h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.2rem}
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:1.5rem;display:flex;flex-direction:column;gap:.8rem;align-items:flex-start}
+.box h3{font-size:1.45rem}.box p{margin:0;color:var(--mute)}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2.2rem;color:var(--mute);font-size:.9rem}
+footer p{max-width:70ch;margin:.3rem 0}
+#top{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:.2s;z-index:15}
+#top.on{opacity:1;pointer-events:auto}
+.prog{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));z-index:30}
+dialog{border:1px solid var(--line);border-radius:18px;padding:0;width:min(34rem,92vw);background:var(--panel);color:var(--ink)}
+dialog::backdrop{background:rgba(6,10,22,.65);backdrop-filter:blur(3px)}
+dialog form{padding:1.4rem;display:grid;gap:.9rem}
+dialog h2{font-size:1.7rem}
+dialog label{display:grid;gap:.3rem;font-weight:500;font-size:.95rem}
+dialog input,dialog select,dialog textarea{font:inherit;padding:.65rem .75rem;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.row{display:flex;gap:.6rem;flex-wrap:wrap}
+.status{color:var(--mute);font-size:.92rem;margin:0}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.rv.in{opacity:1;transform:none}
+@media (max-width:560px){.nav a.t{display:none}.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+body{background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 50% 0,transparent 0,var(--bg) 75%);z-index:-1;pointer-events:none}
+.pill,.cn,.stat span,kbd,.chip,.lk,.mini,.term{font-family:"JetBrains Mono",ui-monospace,monospace}
+.pill{letter-spacing:.02em;font-size:.78rem}.chip,.lk{font-size:.82rem}.cn{font-size:.76rem}
+.term{display:inline-block;margin-top:1.2rem;background:#1b1013;color:#f4dfe1;border-radius:10px;padding:.55rem .9rem;font-size:.85rem;border:1px solid var(--acc);box-shadow:0 0 24px -6px var(--acc)}
+.term span{color:var(--acc)}.term .cur{display:inline-block;width:.5rem;height:1em;background:var(--acc);vertical-align:-.15em;margin-left:.2rem;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero h1{text-shadow:0 0 40px var(--glow)}
+.stat{position:relative;border-left:3px solid var(--acc)}
+.course{position:relative}.course::before{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width .4s}.course:hover::before,.course[open]::before{width:100%}
+.num{border-radius:8px;font-family:"JetBrains Mono",monospace}
+.top-join{padding-top:.5rem}
+
+:root{--ink:#16090c;--mute:#5e464a}
+body{font-size:1.03rem;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{letter-spacing:-.02em}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;line-height:1.02;color:var(--ink);text-shadow:none}
+.hero h1 em{background:linear-gradient(95deg,#e0142b 10%,#ff5a3c 90%);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.09em;border-radius:99px;background:linear-gradient(90deg,#e0142b,#ff5a3c);opacity:.35}
+.hero p.lead{font-size:1.22rem;line-height:1.6;color:#4a3236;max-width:52ch}
+.hero p.lead::first-line{font-weight:500;color:var(--ink)}
+.join h2,.tools,#complaints h2{position:relative}
+.join h2{font-size:clamp(2rem,4.5vw,3rem);padding-left:1rem;border-left:5px solid var(--acc);background:linear-gradient(90deg,var(--soft),transparent 70%);padding-block:.35rem}
+.box h3{color:var(--acc);font-size:1.6rem}
+.box p{color:#4a3236;font-size:1.04rem;line-height:1.6}
+.ct{font-size:1.32rem;color:var(--ink);font-weight:700}
+.cn{color:var(--acc);font-weight:500}
+.cb h3{font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;font-family:"JetBrains Mono",monospace;color:var(--acc)}
+.bt strong{font-size:1.02rem;color:var(--ink)}.bt span{color:#6d5559;font-style:italic}
+.stat b{font-size:2.2rem;background:linear-gradient(95deg,#e0142b,#ff5a3c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand{font-size:1.45rem;letter-spacing:-.03em}
+.nav a.t{font-weight:700;color:#4a3236}.nav a.t:hover{color:var(--acc)}
+footer{color:#5e464a}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<div class="bar"><div class="wrap">
+  <a class="brand" href="#"><span class="logo">ML</span>Math Library</a>
+  <nav class="nav"><a class="t" href="#join">Contribute</a><a class="t" href="#library">Library</a><a class="t" href="#complaints">Complaints</a></nav>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="pill"><i></i>v1.0 · library is growing · new resources added regularly</span>
+  <h1>Free study resources for every <em>BS Mathematics</em> course</h1>
+  <p class="lead">Textbooks, solution manuals, YouTube playlists and practice questions, from Calculus to Stochastic Calculus. Built for students who can’t easily find them.</p>
+  <label class="search"><span style="position:absolute;left:-9999px">Search courses and books</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search a course, book or author, like “Rudin”" autocomplete="off"><kbd>/</kbd>
+  </label>
+  <div><span class="term"><span>$</span> Math Library search --free --all-courses<b class="cur"></b></span></div>
+  <div class="stats" id="stats"></div>
+</div></header>
+
+<section class="join top-join wrap" id="join">
+  <h2>Help the library grow</h2>
+  <div class="boxes">
+    <div class="box"><h3>Companies</h3><p>Need a resource list, a course pack or a partnership with BS Mathematics students? Tell us what you need.</p><button class="btn" type="button" data-form="req">Request resources</button></div>
+    <div class="box"><h3>Students</h3><p>Found a textbook, solution manual, playlist or practice set that helped you? Share it so the next student can use it.</p><button class="btn" type="button" data-form="share">Share a resource</button></div>
+  </div>
+</section>
+<main class="wrap" id="library">
+  <div class="filters chips" id="filters" role="group" aria-label="Filter courses"></div>
+  <div class="tools"><span id="count"></span><button class="btn ghost" id="toggle" type="button">Expand all</button></div>
+  <div class="grid" id="list"></div>
+  <p class="empty" id="empty" hidden>No match yet. Try another word, or share the resource you were looking for.</p>
+</main>
+
+<section class="join wrap" id="complaints">
+  <h2>Complaints and broken links</h2>
+  <div class="boxes"><div class="box"><h3>Something wrong?</h3><p>Dead link, wrong resource, or a copyright concern? Tell us and we will fix or remove it.</p><button class="btn" type="button" data-form="complain">File a complaint</button></div></div>
+</section>
+<footer><div class="wrap">
+  <p>A civics project to help BS Mathematics students who can’t get study resources.</p>
+  <p>Links open third-party websites. If you own a linked resource and want it removed, use “Request resources” and we will take it down.</p>
+</div></footer>
+<button class="btn" id="top" type="button" aria-label="Back to top">↑</button>
+
+<dialog id="dlg">
+  <form id="f" method="dialog">
+    <h2 id="dt"></h2>
+    <label>Your name<input id="fn" required autocomplete="name"></label>
+    <label id="orgl">Company name<input id="fo" autocomplete="organization"></label>
+    <label>Email<input id="fe" type="email" required autocomplete="email"></label>
+    <label>Course<select id="fc"></select></label>
+    <label id="linkl">Link to the resource<input id="fl" type="url" placeholder="https://"></label>
+    <label><span id="ml"></span><textarea id="fm" rows="4" required></textarea></label>
+    <p class="status" id="st" role="status"></p>
+    <div class="row"><button class="btn" type="submit" id="send"></button><button class="btn ghost" type="button" id="copy" hidden>Copy message</button><button class="btn ghost" type="button" id="close">Close</button></div>
+  </form>
+</dialog>
+
+<script>
+const CONTACT_EMAIL="doccon@example.com"; // TODO: replace with the real inbox
+const D=[{"t": "Calculus I, II, III", "books": [{"t": "Calculus: Early Transcendentals", "a": "James Stewart", "b": "https://uodiyala.edu.iq/uploads/PDF%20ELIBRARY%20UODIYALA/EL24/BK08_Calculus%20-%20Early%20Transcendentals.pdf", "s": "https://quizlet.com/explanations/textbook-solutions/calculus-early-transcendentals-9th-edition-9781337613927"}, {"t": "Thomas’ Calculus", "a": "George B. Thomas", "b": "https://www.rkmmanr.org/uploads/Thomas_Calculus.pdf", "s": "https://quizlet.com/explanations/textbook-solutions/thomas-calculus-14th-edition-9780134438986"}, {"t": "Calculus", "a": "Howard Anton, Irl Bivens, & Stephen Davis", "b": "https://3lihandam69.files.wordpress.com/2018/10/calculus-10th-edition-anton.pdf", "s": "https://arslanhelpyoucom.files.wordpress.com/2016/05/calculus-early-transcendentals-10th-ed-howard-anton-iril-bivens-stephen-davis-solution2.pdf"}], "v": [{"l": "Cal-3", "u": "https://youtube.com/playlist?list=PLDesaqWTN6ESk16YRmzuJ8f6-rnuy0Ry7"}, {"l": "Cal-2", "u": "https://youtube.com/playlist?list=PLDesaqWTN6EQ2J4vgsN1HyBeRADEh4Cw-"}, {"l": "Cal-1", "u": "https://youtube.com/playlist?list=PLF797E961509B4EB5"}, {"l": "Cal-1", "u": "https://youtube.com/playlist?list=PLD7F5E25BF583F56B"}, {"l": "Calculus 1", "u": "https://youtube.com/playlist?list=PLHdRLeAbIZE6krGDQthaQRpLZFLD4ob54&si=P23hXry_Z9MGaCuU"}, {"l": "Calculus 2", "u": "https://youtube.com/playlist?list=PLHdRLeAbIZE7KQ922piyRIDAj30XYcOIu&si=8wcAYW3S4nOd48Ug"}, {"l": "Calculus 3", "u": "https://youtube.com/playlist?list=PLHdRLeAbIZE5yZ7ydR9qeB_B6CcVFlX63&si=xX8UbY7Pb-0xaT59"}], "p": ["https://webspace.maths.qmul.ac.uk/t.prellberg/MAS115/MAS115sample.pdf", "https://www.scribd.com/document/881770192/CALCULUS-1-QUESTION-PAPERS", "https://www.math.ksu.edu/~cochrane/m221/m221s22/Old%20Calc%202%20Exams.html", "https://people.math.harvard.edu/~rezchikov/final_sample_format.pdf", "https://people.clas.ufl.edu/aowens2/courses/past-exams-with-solutions/"]}, {"t": "Elements of Set Theory & Logic", "books": [{"t": "Elements of Set Theory", "a": "Herbert B. Enderton", "b": "https://docs.ufpr.br/~hoefel/ensino/CM304_CompleMat_PE3/livros/Enderton_Elements%20of%20set%20theory_%281977%29.pdf", "s": "https://studylib.net/doc/27953657/epdf.tips-elements-of-set-theory-1977-solutions"}, {"t": "A Mathematical Introduction to Logic", "a": "Herbert B. Enderton", "b": "https://www.academia.edu/35178244/Mathematical_Introduction_to_Logic_Herbert_B_Enderton_pdf", "s": "https://dbfin.com/logic/enderton/"}, {"t": "Set Theory and Logic", "a": "Robert R. Stoll", "b": "https://ia800707.us.archive.org/11/items/in.ernet.dli.2015.136320/2015.136320.Set-Theory-And-Logic.pdf", "s": "https://github.com/ahazybellcord/Stoll---Set-Theory-and-Logic"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLO1y6V1SXjjNQg75KAdGNW9cD6zUul4Gs"}, {"l": "", "u": "https://youtube.com/playlist?list=PLYjfPh-rBefNZRCJZhcnBGnNInY4fJe2c"}], "p": ["https://www.scribd.com/document/795693420/sets-and-logic-past-papers", "https://www.studocu.com/row/document/university-of-botswana/introductory-set-and-number-theory/mat211-introductory-set-and-number-theory-practice-test/175363575"]}, {"t": "Vectors & Mechanics I", "books": [{"t": "Vector Mechanics for Engineers: Statics and Dynamics", "a": "Ferdinand Beer & E. Russell Johnston", "b": "https://www.scribd.com/document/1021364337/Vector-Mechanics-for-Engineers-Statics-and-Dynamics-10th-Edition-Ferdinand-P-Beer-full-chapters-instanly", "s": "https://www.scribd.com/document/1022780400/Solution-Manual-for-Vector-Mechanics-for-Engineers-Statics-and-Dynamics-12th-Edition-Ferdinand-Beer-E-Russell-Johnston-Jr-David-Mazurek-Philli"}, {"t": "Engineering Mechanics: Statics & Dynamics", "a": "R.C. Hibbeler", "b": "https://civilittee.com/storage/images/files/file_1712351875qg0nd.pdf", "s": "https://www.aerostudents.com/courses/dynamics/Hibbeler14Solutions.pdf"}, {"t": "Classical Mechanics", "a": "John R. Taylor", "b": "https://archive.org/details/classicalmechani0000tayl", "s": "https://www.scribd.com/document/766828542/John-R-Taylor-Classical-Mechanics-Instructor-s-Solution-Manual-2005"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLKyB9RYzaFRg-Kuba0DBvs-i6NL2oc_gP"}, {"l": "", "u": "https://youtube.com/playlist?list=PLPLlcVV9fXj8o29XTqJcWmRdHogLdYiDd"}], "p": ["https://www.scribd.com/document/858483439/1-Vectors-in-mechanics-tq", "https://madasmaths.com/archive/maths_booklets/further_topics/linear_algebra/vector_exam_questions_part_a.pdf"]}, {"t": "Discrete Mathematics", "books": [{"t": "Discrete Mathematics and Its Applications", "a": "Kenneth H. Rosen", "b": "https://cis.temple.edu/~latecki/Courses/CIS2166-Fall25/RosenDiscreteMath8Ed.pdf", "s": "https://rmmostak.files.wordpress.com/2017/10/solution-of-discrete-math.pdf"}, {"t": "Discrete Mathematics with Applications", "a": "Susanna S. Epp", "b": "https://sites.ohio.edu/barsamia/2022-23.1.3070/text.pdf", "s": "https://pdfcoffee.com/discrete-math-3e-sol-susanna-epp-pdf-free.html"}, {"t": "Concrete Mathematics", "a": "Ronald Graham, Donald Knuth, & Oren Patashnik", "b": "https://www.academia.edu/33657901/Concrete_Mathematics_A_Foundation_for_Computer_Science_pdf", "s": "https://seriouscomputerist.atariverse.com/media/pdf/book/Concrete%20Mathematics.pdf"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLtCBuHKmdxOduWhQPbEwLN2ULKMqgQ44m"}, {"l": "", "u": "https://youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS"}], "p": ["https://www.cl.cam.ac.uk/teaching/exams/pastpapers/t-DiscreteMathematics.html", "https://www.scribd.com/document/792222077/Discrete-Mathematics-Question-Bank-1"]}, {"t": "Introduction to Statistics & Probability", "books": [{"t": "A First Course in Probability", "a": "Sheldon Ross", "b": "https://chengzhaoxi.xyz/download/pdf/book/A-First-Course-in-Probability.pdf", "s": "https://chengzhaoxi.xyz/download/pdf/book/Manual-for-A-First-Course-in-Probability.pdf"}, {"t": "Mathematical Statistics with Applications", "a": "Dennis Wackerly, William Mendenhall, & Richard L. Scheaffer", "b": "https://www.researchgate.net/profile/David-Booth-7/post/When-mentioning-the-null-alternative-hypothesis-is-not-required-in-research-Any-good-reference/attachment/5c7137463843b0544e67b8aa/AS%3A729440560611329%401550923590628/download/Mathematical+Statistics+%28+PDFDrive.com+%29.pdf", "s": "https://www.scribd.com/document/1008237945/Solution-Manual-for-a-First-Course-in-Probability-7th-Edition-by-Sheldon-Ross"}, {"t": "Introduction to Probability and Statistics for Engineers and Scientists", "a": "Sheldon Ross", "b": "https://minerva.it.manchester.ac.uk/~saralees/statbook3.pdf", "s": "https://www.scribd.com/document/1023437183/Introduction-to-Probability-and-Statistics-for-Engineers-and-Scientists-6th-Edition-Sheldon-M-Ross-sample"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PL5901C68C96DFCAD1"}, {"l": "", "u": "https://youtube.com/playlist?list=PLBh2i93oe2qtmWsYpx0NarbeahMJvhRj0"}], "p": ["https://www.scribd.com/document/900123117/Probability-and-Statistics-1-Past-Papers"]}, {"t": "Linear Algebra", "books": [{"t": "Elementary Linear Algebra", "a": "Howard Anton", "b": "https://www.sku.ac.ir/Datafiles/BookLibrary/55/Howard%20Anton,%20Chris%20Rorres%20-%20Elementary%20Linear%20Algebra%20with%20Applications-Wiley%20%282005%29.pdf", "s": "https://www.scribd.com/document/436566286/d34d44efa6d64bc439ea0c4875cff16873a4"}, {"t": "Linear Algebra and Its Applications", "a": "Gilbert Strang", "b": "https://www.researchgate.net/profile/Tadeusz-Ostrowski/post/Dear-researchers-Can-any-one-suggest-to-me-good-books-in-matrix-analysis-random-matrix-theory-linear-algebra-and-probability-theory/attachment/59d62a7a79197b8077988e2d/AS%3A339265402753024%401457898583820/download/Strang.pdf", "s": ""}, {"t": "Linear Algebra Done Right", "a": "Sheldon Axler", "b": "https://link.springer.com/content/pdf/10.1007/978-3-031-41026-0.pdf", "s": "https://linear.axler.net/LinearAbridged.pdf"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PL0vscuWSjzrJhDbQmPGiTAqvhPbzTm8l6"}, {"l": "", "u": "https://youtube.com/playlist?list=PL49CF3715CB9EF31D"}, {"l": "Algebra", "u": "https://youtube.com/playlist?list=PLHdRLeAbIZE4fb7O17KAt0XmOERoIZPUD&si=JJk0wcXAbVAN5xSO"}], "p": ["https://www.scribd.com/document/683537153/Linear-Algebra-Past-Exam-Questions"]}, {"t": "Ordinary Differential Equations", "books": [{"t": "Differential Equations with Boundary-Value Problems", "a": "Dennis G. Zill", "b": "https://www.scribd.com/document/1037229005/Differential-Equations-with-Boundary-Value-Problems-9th-Edition-Zill-full-chap", "s": "https://cdn.prexams.com/1179/Solution%20Manual.pdf"}, {"t": "Elementary Differential Equations and Boundary Value Problems", "a": "William E. Boyce & Richard C. DiPrima", "b": "https://www.imsc.res.in/~pralay/diprima.pdf", "s": "https://archive.org/details/elementarydiffer0000hain"}, {"t": "Fundamentals of Differential Equations", "a": "R. Kent Nagle, Edward B. Saff, & Arthur David Snider", "b": "https://faculty.ksu.edu.sa/sites/default/files/R.-Kent-Nagle-Edward-B.-Saff-Arthur-David-Snider-Fundamentals-of-Differential-Equations-Pearson-2017.pdf", "s": ""}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLDesaqWTN6ESPaHy2QUKVaXNZuQNxkYQ_"}, {"l": "", "u": "https://youtube.com/playlist?list=PLBh2i93oe2qs0Wn0lFMGnKVQ1V3obH4Ah"}], "p": ["https://www.studocu.com/row/document/kenyatta-university/ordinary-differential-equations/sma-335-ordinary-differential-equations-i-exam-questions-and-solutions/138176715", "https://www.scribd.com/document/975769045/Ode-Past-Papers"]}, {"t": "Real Analysis I, II", "books": [{"t": "Introduction to Real Analysis", "a": "Robert G. Bartle & Donald R. Sherbert", "b": "https://sowndarmath.wordpress.com/wp-content/uploads/2017/10/real-analysis-by-bartle.pdf", "s": "https://www.scribd.com/document/1008477914/Solution-Manual-for-Introduction-to-Real-Analysis-4th-Edition-by-Robert-g-Bartle"}, {"t": "Understanding Analysis", "a": "Stephen Abbott", "b": "https://archive.org/details/understandingana0000abbo_h6w9", "s": "https://studylib.net/doc/25682156/pdfslide.net-solutions-manual-for-understanding-analysis-..."}, {"t": "Principles of Mathematical Analysis", "a": "Walter Rudin", "b": "https://www.lehman.edu/faculty/rbettiol/lehman_teaching/2020mat320/baby_Rudin.pdf", "s": "https://www.scribd.com/document/404021861/Solutions-to-Principles-of-Mathematical-Analysis-Walter-Rudin"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PL9AzxofEGgJPc0GDtnHipn51r0e8zZIEA"}, {"l": "", "u": "https://youtube.com/playlist?list=PLBh2i93oe2quABbNq4I_-hyjhW8eOdgrO"}], "p": ["https://ocw.mit.edu/courses/18-100c-real-analysis-fall-2012/pages/exams/", "https://www.math.stonybrook.edu/~azinger/mat320-spr19/MITfinex.pdf"]}, {"t": "Group Theory / Abstract Algebra", "books": [{"t": "Contemporary Abstract Algebra", "a": "Joseph A. Gallian", "b": "https://www.ayman-badawi.com/2019%20%20Contemporary+Abstract+Algebra-7.pdf", "s": "https://dokumen.pub/complete-solutions-manual-to-accompany-contemporary-abstract-algebra-9nbsped-9781305657984.html"}, {"t": "Abstract Algebra", "a": "David S. Dummit & Richard M. Foote", "b": "https://rksmvv.ac.in/wp-content/uploads/2021/04/David_S_Dummit_Richard_M_Foote_Abstract_Algeb_230928_225848.pdf", "s": "https://quizlet.com/subjects/math/algebra/abstract-algebra-textbook-solutions-50770dc2-t02"}, {"t": "A First Course in Abstract Algebra", "a": "John B. Fraleigh", "b": "https://dokumen.pub/first-course-in-abstract-algebra.html", "s": "https://www.mymathscloud.com/modules/university/textbooks/algebra-abstract/"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLU6SqdYcYsfKdxRXRe1vtR1UzFPqmj711"}, {"l": "", "u": "https://youtube.com/playlist?list=PLBh2i93oe2qvyrgm_lchujtMbEdXFAHEQ"}], "p": ["http://www.ayman-badawi.com/FILES/All%20Exams%20MTH%20320%20in%20one%20file%20Spring%202012.pdf"]}, {"t": "Partial Differential Equations", "books": [{"t": "Partial Differential Equations: An Introduction", "a": "Walter A. Strauss", "b": "https://celene.univ-orleans.fr/pluginfile.php/103793/course/overviewfiles/Partial%20Differential%20Equations%20An%20Introduction.pdf?forcedownload=1", "s": "https://dokumen.pub/solutions-manual-to-strauss-partial-differential-equations-2nbsped.html"}, {"t": "Applied Partial Differential Equations with Fourier Series and Boundary Value Problems", "a": "Richard Haberman", "b": "https://www.vaccination.gov.ng/virtual-library/zCADjA/270002/Applied%20Partial%20Differential%20Equations%20Richard%20Haberman.pdf", "s": "https://www.scribd.com/document/994382866/Applied-Partial-Differential-Equations-With-Fourier-Series-and-Boundary-Value-Problems-5th-Edition-Richard-Haberman-eBook-Testbank"}, {"t": "Introduction to Partial Differential Equations", "a": "Peter J. Olver", "b": "https://link.springer.com/content/pdf/10.1007/978-3-319-02099-0.pdf", "s": "https://dokumen.pub/introduction-to-partial-differential-equations-undergraduate-texts-in-mathematics-1nbsped-9783319020983-3319020986.html"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PL8Q8BKnWsfCFDmaPha2aS7qjDe0m2_OVR"}, {"l": "", "u": "https://youtube.com/playlist?list=PLg4t3mXO3RduX-CPx3pkfbEB2GQ58_zjp"}], "p": ["https://www.scribd.com/document/963027520/QP-2", "https://www.scribd.com/document/804741237/Sma432-Past-Papers"]}, {"t": "Numerical Analysis I, II", "books": [{"t": "Numerical Analysis", "a": "Richard L. Burden & J. Douglas Faires", "b": "https://faculty.ksu.edu.sa/sites/default/files/numerical_analysis_9th.pdf", "s": "https://www.scribd.com/document/660675554/Numerical-Analysis-10th-Edition-Burden-Faires-Burden-Solution-Manual"}, {"t": "Numerical Methods for Engineers", "a": "Steven C. Chapra & Raymond P. Canale", "b": "https://www.scribd.com/doc/105275558/Numerical-Methods-for-Engineers-6th-Edition-2009-Chapra-Canale", "s": "https://www.academia.edu/38084603/Numerical_Methods_for_Engineers_SEVENTH_EDITION"}, {"t": "A Friendly Introduction to Numerical Analysis", "a": "Brian Bradie", "b": "https://www.scribd.com/document/1034377454/Brian-Bradie-A-Friendly-Introduction-to-Numerical-Analysis-Pearson-2006", "s": "https://www.scribd.com/document/523853190/A-Friendly-Introduction-to-Numerical-Analysis-by-Brain-Bradie1"}], "v": [{"l": "Numerical Analysis I", "u": "https://youtube.com/playlist?list=PLhSp9OSVmeyJdYAHtIbDlkBLG0G1wuosk"}, {"l": "Numerical Analysis II", "u": "https://youtube.com/playlist?list=PLYVtE9icXrCCAjCHWP8H8EQ8ObP4r9nAv"}], "p": ["https://www.maths.dur.ac.uk/papers/2025/MATH2051-2025-Numerical%20Analysis%20II-exam.pdf"]}, {"t": "Vector & Tensor Analysis", "books": [{"t": "Vector & Tensor Analysis for Scientists and Engineers", "a": "Dr. Nawazish Ali Shah", "b": "https://www.scribd.com/document/439728787/vector-and-tensor-analysis-by-dr-nawazish-ali-pdf-download-1-pdf", "s": "https://www.mathcity.org/notes/vector-and-tensor-analysis-by-dr-nawazish"}, {"t": "Vector Analysis and an Introduction to Tensor Analysis (Schaum’s Outlines)", "a": "Murray R. Spiegel", "b": "http://www2.fizik.usm.my/tlyoon/teaching/ZCT211_1415/Schaum_VectorAnalysis.pdf", "s": "http://www2.fizik.usm.my/tlyoon/teaching/ZCT211_1415/Schaum_VectorAnalysis.pdf"}, {"t": "Introduction to Vector and Tensor Analysis", "a": "Robert C. Wrede", "b": "https://vdoc.pub/documents/introduction-to-vector-and-tensor-analysis-3lkll1drgso0", "s": "https://vdoc.pub/documents/introduction-to-vector-and-tensor-analysis-3lkll1drgso0"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLh5lK-tloyLJN5oe4ko27lF-TPSeaYuWU"}, {"l": "", "u": "https://youtube.com/playlist?list=PL4-wcHelBzgnTBMlzeLQlh04h0CdO4mOY"}], "p": ["https://dn710604.ca.archive.org/0/items/vector_and_tensor_analysis_1953_-_g_hay/vector_and_tensor_analysis_%281953%29_-_g_hay.pdf", "https://www.scribd.com/document/961827166/Vector-and-Tensor-Analysis-Final-Term-Important-Questions-With-Solution-Given-by-Sir-Asim-Shahb"]}, {"t": "Complex Analysis", "books": [{"t": "Complex Variables and Applications", "a": "James Ward Brown & Ruel V. Churchill", "b": "https://www.scribd.com/document/1011343762/Complex-Variables-and-Applications-9th-edition-by-James-Ward-Brown-Ruel-Churchill-0073383171-9780073383170-eBook-clear-pdf", "s": "https://www.scribd.com/document/734363208/Brown-J-Churchill-R-Complex-Variables-and-Applications-Student-Solutions-Manual-MGH-2008"}, {"t": "A First Course in Complex Analysis with Applications", "a": "Dennis G. Zill & Patrick D. Shanahan", "b": "https://mariosuazo.files.wordpress.com/2013/08/dennis_zill_a_first_course_in_complex_analysis_wbookfi-org.pdf", "s": "https://mariosuazo.files.wordpress.com/2013/08/dennis_zill_a_first_course_in_complex_analysis_wbookfi-org.pdf"}, {"t": "Visual Complex Analysis", "a": "Tristan Needham", "b": "https://www.academia.edu/15526137/Visual_Complex_Analysis_Tristan_Needham", "s": "https://umv.science.upjs.sk/hutnik/NeedhamVCA.pdf"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLjPPGtgYyhFY-37B-dQSvjC2jL7J6hwiH"}, {"l": "", "u": "https://youtube.com/playlist?list=PLBh2i93oe2qvnF0fCuYAFDUJJbZ-ybBlI"}], "p": ["https://www.scribd.com/document/862444298/2020-MT-3C-13-Complex-Analysis-20211004-0001", "https://web.math.princeton.edu/generals/complex13.pdf", "https://www.scribd.com/document/905211082/48ab0b12-cf1e-4fde-a1d0-1970c5914c85"]}, {"t": "Methods of Mathematical Physics", "books": [{"t": "Mathematical Methods for Physicists", "a": "George B. Arfken & Hans J. Weber", "b": "https://archive.org/details/Mathematical_Methods_for_Physicists", "s": "https://archive.org/download/SolutionMathematicalMethodForPhysics7/Solution%20mathematical%20method%20for%20physics-7.pdf"}, {"t": "Mathematical Methods in the Physical Sciences", "a": "Mary L. Boas", "b": "https://archive.org/details/MathematicalMethodsInThePhysicalSciences3e", "s": "https://www.academia.edu/17963288/Mathematical_Methods_in_the_Physical_Sciences_3e"}, {"t": "Mathematical Methods for Physics and Engineering", "a": "K. F. Riley, M. P. Hobson, & S. J. Bence", "b": "https://www.astrosen.unam.mx/~aceves/Metodos/ebooks/riley_hobson_bence.pdf", "s": "http://lib.ysu.am/disciplines_bk/5b967a95905a51d1ef8ae54f965dfcac.pdf"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLxhaPrr4aQ9muq39ofUhcnhE-T1ik3xLE"}, {"l": "", "u": "https://youtube.com/playlist?list=PLrFQv5Z38ine_82gAlPXruxBEhMgKinFD"}], "p": ["https://www.scribd.com/document/694511922/MMP-Past-Papers", "https://www.scribd.com/document/924102824/Past-Paper-Mathematical-Method", "https://www.scribd.com/document/977265489/Mathematical-Methods-in-Physics-Assignement-Merged"]}, {"t": "Topology", "books": [{"t": "Topology", "a": "James R. Munkres", "b": "https://archive.org/details/topology0002edmunk", "s": "https://dbfin.com/topology/munkres/"}, {"t": "Introduction to Topology and Modern Analysis", "a": "George F. Simmons", "b": "https://ebooks.lpude.in/arts/ma_mathematics/year_2/DMTH503_TOPOLOGY.pdf", "s": "https://ebooks.lpude.in/arts/ma_mathematics/year_2/DMTH503_TOPOLOGY.pdf"}, {"t": "General Topology", "a": "John L. Kelley", "b": "https://www.celsiuselements.com/math/general-topology-books/", "s": "https://www.celsiuselements.com/math/general-topology-books/"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PL2Rb_pWJf9JqgIR6RR3VFF2FwKCyaUUZn"}, {"l": "", "u": "https://youtube.com/playlist?list=PL8D5taFfp6Cw2F2WvQYTwWZoID5UAO8Mp"}], "p": ["https://www.scribd.com/document/668439738/Topology-Past-Papers", "https://www.scribd.com/document/1034119146/Topology-Paper-Solved"]}, {"t": "Functional Analysis I", "books": [{"t": "Introductory Functional Analysis with Applications", "a": "Erwin Kreyszig", "b": "https://archive.org/details/introductoryfunc0000krey", "s": "https://www.scribd.com/document/456703011/www-incar-tw-Kreyszig-Functional-Analysis-Solutions-Manual"}, {"t": "Functional Analysis", "a": "Walter Rudin", "b": "https://www.scribd.com/doc/21251151/Rudin-Walter-Functional-Analysis", "s": "https://github.com/gitcordier/FunctionalAnalysis"}, {"t": "A Course in Functional Analysis", "a": "John B. Conway", "b": "https://uomustansiriyah.edu.iq/media/lectures/9/9_2017_09_30!12_00_39_PM.pdf", "s": "https://www.numerade.com/books/a-course-in-functional-analysis-2/"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLBh2i93oe2qsGKDOsuVVw-OCAfprrnGfr"}, {"l": "", "u": "https://youtube.com/playlist?list=PL9AzxofEGgJP1LNFXwIc9lMfi4FtZ6dN6"}], "p": ["https://thichchaytron.files.wordpress.com/2013/10/functional-problems-anhle-full-www-mathvn-com.pdf", "https://www.scribd.com/document/935172239/exam"]}, {"t": "Mathematical Modeling", "books": [{"t": "A First Course in Mathematical Modeling", "a": "Frank R. Giordano, William P. Fox, & Steven B. Horton", "b": "https://archive.org/details/firstcourseinmat0000gior", "s": "https://www.scribd.com/document/331713383/Solution-Manual-and-Test-Bank"}, {"t": "Mathematical Modeling", "a": "Mark M. Meerschaert", "b": "https://pdfcoffee.com/mathematical-modeling-2015-pdf-free.html", "s": "https://www.scribd.com/document/997757687/Mathematical-Modeling-4th-Edition-Meerschaert-eBook-Testbank"}, {"t": "Concepts of Mathematical Modeling", "a": "Walter J. Meyer", "b": "https://archive.org/details/conceptsofmathem0000meye", "s": "https://archive.org/details/conceptsofmathem0000meye"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLXsDp0z6VWFT5ZM86xh8i1AMFYxnrefLk"}, {"l": "", "u": "https://youtube.com/playlist?list=PLLy_2iUCG87CZucbP4tMMnOYOwExq0E9_"}], "p": ["https://www.docsity.com/en/docs/sample-paper-mathematical-modeling-and-simulation-exam-paper/77819/", "https://www.academia.edu/Documents/in/Mathematical_Modelling_and_Applications/TopPapers"]}, {"t": "Differential Geometry", "books": [{"t": "Differential Geometry of Curves and Surfaces", "a": "Manfredo P. do Carmo", "b": "http://home.ustc.edu.cn/~huangty0407/DGNotes/Do%20Carmo%20-%20Differential%20Geometry%20of%20Curves%20and%20Surfaces.pdf", "s": "https://archive.org/details/solving-differential-geometry"}, {"t": "Elementary Differential Geometry", "a": "Andrew Pressley", "b": "https://archive.org/details/andrew-pressley-elementary-differential-geometry-2010-springer", "s": "https://www.studocu.com/row/document/nazarbaev-universiteti/fluid-mechanics/andrew-pressley-instructors-solutions-manual-to-elementary-differential-geometry/20905399"}, {"t": "Elementary Differential Geometry", "a": "Barrett O’Neill", "b": "https://books.google.com/books/about/Elementary_Differential_Geometry.html?id=HrriBQAAQBAJ", "s": "https://quizlet.com/explanations/textbook-solutions/elementary-differential-geometry-2nd-edition-9780120887354"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PL8D5taFfp6CzVV26aod2lw8yPktzz4hcJ"}, {"l": "", "u": "https://youtube.com/playlist?list=PLeFwDGOexoe-Vvq0Ef3PmXVqWL9j8NX35"}], "p": ["https://www.scribd.com/document/893694651/DG-NOV-21", "https://personal.utdallas.edu/~coskunuz/courses/math405_F13/Math405final_F13_key.pdf"]}, {"t": "Number Theory", "books": [{"t": "Elementary Number Theory", "a": "David M. Burton", "b": "https://www.researchgate.net/profile/Issam_Kaddoura/post/Do-irrational-numbers-exist-in-nature/attachment/5f580f02f97a8800014574a2/AS%3A933631606403072%401599606529112/download/david-m-burton-elementary-number-theory-mcgraw-hill-education-2010.pdf", "s": "https://archive.org/details/studentssolution0000davi"}, {"t": "Elementary Number Theory and Its Applications", "a": "Kenneth H. Rosen", "b": "https://users.fmf.uni-lj.si/lavric/Rosen%20-%20Elementary%20number%20theory%20and%20its%20applications.pdf", "s": "https://www.scribd.com/document/1008293943/Solution-Manual-for-Elementary-Number-Theory-and-Its-Application-6th-Edition-by-Kenneth-h-Rosen"}, {"t": "An Introduction to the Theory of Numbers", "a": "G.H. Hardy & E.M. Wright", "b": "https://cs.mcgill.ca/~akroit/math/numtheory/Hardy%20and%20Wright%20and%20HeathBrown%20and%20Silverman%20An%20Introduction%20to%20the%20Theory%20of%20Numbers.pdf", "s": ""}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLr3WmPgPWZfX1HUpeyKkP6ir2wOFhqXMO"}, {"l": "", "u": "https://youtube.com/playlist?list=PLC8P8xExqiuc7GC1H2qNMACugVUmvOUgq"}], "p": ["https://step.maths.org/taxonomy/term/36?page=1", "https://people.brandeis.edu/~jbellaic/nt/finalnt.pdf"]}, {"t": "Quantum Mechanics", "books": [{"t": "Introduction to Quantum Mechanics", "a": "David J. Griffiths", "b": "https://archive.org/details/introductiontoqu0000unse_g3j8", "s": "https://physicaeducator.wordpress.com/wp-content/uploads/2018/01/solutions-of-quantum-mechanics-by-griffith.pdf"}, {"t": "Quantum Mechanics: Concepts and Applications", "a": "Nouredine Zettili", "b": "https://archive.org/details/zettili-n.-quantum-mechanics-concepts-and-applications-3rd-ed.", "s": "https://archive.org/stream/zettili-n.-quantum-mechanics-concepts-and-applications-3rd-ed./%5BZettili%2C%20N.%5D-%20Quantum%20Mechanics%20-%20Concepts%20and%20Applications%20%283rd%20Ed.%29_djvu.txt"}, {"t": "Principles of Quantum Mechanics", "a": "R. Shankar", "b": "https://archive.org/details/principlesofquan0000shan", "s": "https://www.academia.edu/43527300/Principles_of_Quantum_Mechanics_SECOND_EDITION"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLRN3HroZGu2mCtdalEmZAM2nr1xBWAtUn"}, {"l": "", "u": "https://youtube.com/playlist?list=PLO1URmIbkyNsZpSbgl9iEZkWruQazxWYj"}], "p": ["https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/47367602c26c4559e9c267f8694203bf_MIT8_04S16_FinalTest_2015.pdf", "https://www.scribd.com/document/975779274/Quantum-Mechanics-II-Past-Papers"]}, {"t": "Data Analytics", "books": [{"t": "An Introduction to Statistical Learning (with Applications in R/Python)", "a": "Gareth James, Daniela Witten, Trevor Hastie, & Robert Tibshirani", "b": "https://www.statlearning.com/", "s": "https://www.statlearning.com/"}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU"}, {"l": "", "u": "https://youtube.com/playlist?list=PLjVLYmrlmjGdRs1sGqRrTE-EMraLclJga"}], "p": ["https://www.scribd.com/document/537349590/Data-Analytics-Question-paper", "https://www.revisiongenie.com/subject/aaq/it-data-analytics/ocr/past-papers", "https://www.scribd.com/document/895914024/Data-Analytics-Exam-Sample-Questions-100"]}, {"t": "Stochastic Calculus", "books": [{"t": "Stochastic Calculus for Finance I & II", "a": "Steven Shreve", "b": "https://archive.org/details/stochasticcalcul0000shre", "s": "https://www.scribd.com/document/1067689272/Read-Solutions-Manual-to-accompany-Stochastic-Calculus-for-Finance-I-9780387249681-online-reading"}, {"t": "Introduction to Stochastic Calculus with Applications", "a": "Fima C. Klebaner", "b": "https://img1.wsimg.com/blobby/go/40b9f71d-cb4f-41a0-8c1c-f2547aa795ed/downloads/klebaner_stochastic_calculus.pdf", "s": "https://books.google.com/books/about/Problems_and_Solutions_in_Stochastic_Cal.html?id=5HkpEQAAQBAJ"}, {"t": "Stochastic Differential Equations: An Introduction with Applications", "a": "Bernt Øksendal", "b": "https://people.stat.ucla.edu/ywu/research/documents/StochasticDifferentialEquations.pdf", "s": ""}], "v": [{"l": "", "u": "https://youtube.com/playlist?list=PLWglnu22G9yZnlUGff0hJm9YftL89fJeB"}, {"l": "", "u": "https://youtube.com/playlist?list=PLolcsuKp8c-jPJyAUROuymxoYFzRJD-xb"}], "p": ["https://www.scribd.com/document/273548425/Stochastic-Calculus-Final-Exam-With-Solutions", "https://www.ceremade.dauphine.fr/~salez/stoc_XC22.pdf", "https://www.scribd.com/document/1027993396/Stochastic-Calculus-Test", "https://students.uu.nl/sites/default/files/20-21-b362h3.pdf"]}];
+const G={"Core":[0,1,3,4,5,6],"Analysis":[7,11,12,14,15],"Algebra & Geometry":[8,17,18],"Applied & Physics":[2,9,10,13,16,19,20,21]};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return 'link'}};
+const pl=(n,w)=>n+' '+w+(n===1?'':'s');
+const link=(u,t,c)=>`<a class="lk ${c||''}" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(t)}</a>`;
+let saved=[];try{saved=JSON.parse(localStorage.getItem('doccon-saved')||'[]')}catch(e){}
+const persist=()=>{try{localStorage.setItem('doccon-saved',JSON.stringify(saved))}catch(e){}};
+D.forEach((c,i)=>{c.id='c'+i;c.g=Object.keys(G).find(k=>G[k].includes(i))||'Core'});
+function card(c,i){
+  const books=c.books.map(b=>`<li><div class="bt"><strong>${esc(b.t)}</strong><span>${esc(b.a)}</span></div><div class="bl">${(!b.s||b.s===b.b)?link(b.b,'Book and solutions'):link(b.b,'Textbook')+link(b.s,'Solutions','sol')}</div></li>`).join('');
+  const vids=c.v.map((v,j)=>link(v.u,v.l||'Playlist '+(j+1),'yt')).join('');
+  const prac=c.p.map((u,j)=>link(u,'Practice '+(j+1)+' · '+host(u))).join('');
+  return `<details class="course rv" id="${c.id}"><summary><span class="num">${i+1}</span><span class="meta"><span class="ct">${esc(c.t)}</span><span class="cn">${pl(c.books.length,'book')} · ${pl(c.v.length,'playlist')} · ${pl(c.p.length,'practice set')}</span></span><button class="star" type="button" data-save="${c.id}" aria-label="Save ${esc(c.t)}" aria-pressed="false">☆</button></summary><div class="cb"><div class="full"><h3>Textbooks and solution manuals</h3><ul class="books">${books}</ul></div><div><h3>YouTube playlists</h3><div class="chips">${vids}</div></div><div><h3>Practice questions</h3><div class="chips">${prac}</div></div><p class="full"><button class="mini" type="button" data-form="share" data-course="${c.id}">Share a resource for this course</button></p></div></details>`;
+}
+$('#list').innerHTML=D.map(card).join('');
+const sum=k=>D.reduce((a,c)=>a+c[k].length,0);
+const links=D.reduce((a,c)=>a+c.books.length*2+c.v.length+c.p.length,0);
+$('#stats').innerHTML=[[D.length,'courses'],[sum('books'),'textbooks'],[sum('v'),'playlists'],[sum('p'),'practice sets']].map(([n,l])=>`<div class="stat"><b data-n="${n}">0</b><span>${l}</span></div>`).join('');
+document.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;let t=0;const id=setInterval(()=>{t+=Math.max(1,Math.ceil(n/20));if(t>=n){t=n;clearInterval(id)}el.textContent=t},35)});
+let grp='All';
+const opts=['All','Saved',...Object.keys(G)];
+$('#filters').innerHTML=opts.map(o=>`<button class="chip" type="button" data-g="${esc(o)}" aria-pressed="${o==='All'}">${o==='Saved'?'★ Saved':esc(o)}</button>`).join('');
+function paintStars(){document.querySelectorAll('[data-save]').forEach(b=>{const on=saved.includes(b.dataset.save);b.setAttribute('aria-pressed',on);b.textContent=on?'★':'☆'})}
+function filter(){
+  const q=$('#q').value.trim().toLowerCase();let n=0;
+  D.forEach(c=>{
+    const hay=(c.t+' '+c.books.map(b=>b.t+' '+b.a).join(' ')).toLowerCase();
+    const okG=grp==='All'||(grp==='Saved'?saved.includes(c.id):c.g===grp);
+    const ok=okG&&(!q||hay.includes(q));
+    const el=document.getElementById(c.id);el.hidden=!ok;
+    if(ok){n++;if(q)el.open=true}
+  });
+  $('#count').textContent=`Showing ${n} of ${D.length} courses`;
+  $('#empty').hidden=n>0;
+}
+$('#q').addEventListener('input',filter);paintStars();filter();
+let allOpen=false;
+$('#toggle').addEventListener('click',()=>{allOpen=!allOpen;document.querySelectorAll('.course:not([hidden])').forEach(d=>d.open=allOpen);$('#toggle').textContent=allOpen?'Collapse all':'Expand all'});
+const dlg=$('#dlg');let mode='share',msg='';
+$('#fc').innerHTML='<option value="">Not sure / other</option>'+D.map(c=>`<option value="${esc(c.t)}" data-id="${c.id}">${esc(c.t)}</option>`).join('');
+function openForm(m,cid){
+  mode=m;const req=m==='req',cp=m==='complain';
+  $('#dt').textContent=req?'Request resources':cp?'File a complaint':'Share a resource';
+  $('#orgl').hidden=!req;$('#linkl').hidden=req;
+  $('#ml').textContent=req?'What do you need?':cp?'What is the problem?':'What is it and how does it help?';
+  $('#send').textContent=req?'Send request':cp?'Send complaint':'Send resource';
+  $('#st').textContent='';$('#copy').hidden=true;
+  if(cid){const o=document.querySelector(`#fc option[data-id="${cid}"]`);if(o)$('#fc').value=o.value}
+  dlg.showModal();
+}
+document.addEventListener('click',e=>{
+  const s=e.target.closest('[data-save]');
+  if(s){e.preventDefault();e.stopPropagation();const id=s.dataset.save;saved=saved.includes(id)?saved.filter(x=>x!==id):[...saved,id];persist();paintStars();if(grp==='Saved')filter();return}
+  const f=e.target.closest('[data-form]');if(f){openForm(f.dataset.form,f.dataset.course);return}
+  const g=e.target.closest('[data-g]');
+  if(g){grp=g.dataset.g;document.querySelectorAll('[data-g]').forEach(b=>b.setAttribute('aria-pressed',b===g));filter()}
+});
+$('#close').addEventListener('click',()=>dlg.close());
+$('#f').addEventListener('submit',e=>{
+  e.preventDefault();const req=mode==='req';
+  const subject=(req?'Resource request: ':mode==='complain'?'Complaint: ':'Resource shared: ')+($('#fc').value||'General');
+  msg=`Name: ${$('#fn').value}\n`+(req?`Company: ${$('#fo').value}\n`:'')+`Email: ${$('#fe').value}\nCourse: ${$('#fc').value||'Not sure / other'}\n`+(req?'':`Link: ${$('#fl').value}\n`)+`\n${$('#fm').value}`;
+  $('#st').textContent='Your email app is opening with the message ready to send. If nothing opens, use Copy message and email it to '+CONTACT_EMAIL+'.';
+  $('#copy').hidden=false;
+  location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(msg);
+});
+$('#copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(msg);$('#st').textContent='Message copied.'}catch(e){$('#st').textContent='Copy failed. Select the message text and copy it manually.'}});
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();$('#q').focus()}});
+$('#top').addEventListener('click',()=>scrollTo({top:0}));
+addEventListener('scroll',()=>{const h=document.documentElement;$('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+'%';$('#top').classList.toggle('on',h.scrollTop>600)},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.05});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
